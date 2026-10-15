@@ -36,9 +36,13 @@ main{max-width:1100px;margin:0 auto;padding:14px 16px 40px}
 .floor{border:0;border-radius:16px;background:#fff;padding:18px 6px;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.08);font-size:24px;font-weight:800;color:var(--ink)}
 .floor .meta{display:block;font-size:12px;font-weight:600;color:var(--sub);margin-top:6px}
 .floor .meta b{color:var(--need)}
-.floor.on{background:var(--ink);color:#fff}
-.floor.on .meta{color:#cbd5e1}
-.floor.on .meta b{color:#fca5a5}
+/* 층별 버튼 색깔: 1층 회색, 2층 연노란색, 3층 하늘색 */
+.floor[data-f="1"]{background:#e5e7eb}
+.floor[data-f="2"]{background:#fef9c3}
+.floor[data-f="3"]{background:#bae6fd}
+/* 선택한 층: 색은 그대로 두고 진한 테두리로 표시 */
+.floor{border:3px solid transparent}
+.floor.on{border-color:var(--ink);box-shadow:0 3px 8px rgba(0,0,0,.25)}
 
 /* ── 시설 카드 ── */
 .panel{background:#fff;border-radius:16px;padding:6px 14px 16px;margin-bottom:22px}
